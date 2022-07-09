@@ -18,6 +18,9 @@ jobs:
     docker:
       - image: cimg/ruby:2.7.4
       - image: circleci/postgres:9.5-alpine
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - ruby/install-deps
@@ -27,7 +30,7 @@ jobs:
       - run:
           name: Database setup
           command: bundle exec rails db:create
-    
+
 
 
 
