@@ -17,9 +17,9 @@ jobs:
   test:
     docker:
       - image: cimg/ruby:2.7.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
+        # auth:
+        #   username: mydockerhub-user
+        #   password: $DOCKERHUB_PASSWORD
       - image: circleci/postgres:9.5-alpine
         auth:
           username: mydockerhub-user
@@ -28,7 +28,7 @@ jobs:
           POSTGRES_USER: circleci-demo-ruby
           POSTGRES_DB: rails_blog_test
           POSTGRES_PASSWORD: ""
-          
+
     environment:
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
