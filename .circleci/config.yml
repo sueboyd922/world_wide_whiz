@@ -46,6 +46,7 @@ jobs:
       - run:
           name: Database setup
           command: bundle exec rails db:create
+      - ruby/rspec-test
 
 
 
