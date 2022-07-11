@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'rspec_junit_formatter'
 
+gem 'omniauth-google-oauth2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
@@ -40,6 +42,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'faker'
   gem 'factory_bot'
+  gem 'figaro'
 end
 
 group :development do
