@@ -9,7 +9,7 @@ RSpec.describe 'home page' do
     visit '/'
 
     expect(page).to have_button("Sign in with Google")
-    # click_on("Sign in with Google")
-    # require "pry"; binding.pry
+    click_on("Sign in with Google")
+    expect(current_path).to eq("/dashboard")
   end
 end
