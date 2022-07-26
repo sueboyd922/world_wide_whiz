@@ -2,26 +2,26 @@
 
 <%= form_with url: '/quizzes/new', method: :post, local: true do |form| %>
 <h4> Choose a Region! </h4>
-<%= form.radio_button :region, "Americas" %>
+<%= form.radio_button :region, "americas" %>
 <%= form.label :region_americas, "Americas" %><br>
-<%= form.radio_button :region, "Europe" %>
+<%= form.radio_button :region, "europe" %>
 <%= form.label :region_europe, "Europe"  %><br>
-<%= form.radio_button :region, "Asia" %>
+<%= form.radio_button :region, "asia" %>
 <%= form.label :region_asia, "Asia"  %><br>
-<%= form.radio_button :region, "Africa" %>
+<%= form.radio_button :region, "africa" %>
 <%= form.label :region_africa, "Africa"  %><br>
-<%= form.radio_button :region, "Oceania" %>
+<%= form.radio_button :region, "oceania" %>
 <%= form.label :region_oceania, "Oceania"  %><br>
 <br>
 <h4> Choose a Level </h4>
-<p> Easy, Hard and Random will have 15 questions and All will have every country in the region! </p>
-<%= form.radio_button :quiz_type, "Easy" %>
-<%= form.label :quiz_type_easy, "Easy"  %><br>
-<%= form.radio_button :quiz_type, "Hard" %>
-<%= form.label :quiz_type_hard, "Hard"  %><br>
-<%= form.radio_button :quiz_type, "Random" %>
-<%= form.label :quiz_type_random, "Random"  %><br>
-<%= form.radio_button :quiz_type, "All" %>
-<%= form.label :quiz_type_all, "All"  %><br><br>
+<p> Easy, Hard and Random will have 15 questions and Full will have every country in the region! </p>
+<%= form.radio_button :level, "easy" %>
+<%= form.label :level_easy, "Easy"  %><br>
+<%= form.radio_button :level, "hard" %>
+<%= form.label :level_hard, "Hard"  %><br>
+<%= form.radio_button :level, "random" %>
+<%= form.label :level_random, "Random"  %><br>
+<%= form.radio_button :level, "full" %>
+<%= form.label :level_all, "Full"  %><br><br>
 <%= form.submit "Start"%>
 <% end %>
