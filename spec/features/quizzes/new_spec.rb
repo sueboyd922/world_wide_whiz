@@ -10,8 +10,9 @@ RSpec.describe 'new quiz page' do
   describe 'creating a new quiz' do
     it 'creates a new quiz' do
       visit '/quizzes/new'
-
+      
       choose('Africa')
+      choose('Easy')
       click_on("Start")
     end
   end
