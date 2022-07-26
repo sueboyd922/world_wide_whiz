@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: 'users#create'
   get "/dashboard", to: 'users#show'
 
+  get '/quizzes/new', to: 'quizzes#new'
+  post '/quizzes/new', to: 'quizzes#create'
 
 end
