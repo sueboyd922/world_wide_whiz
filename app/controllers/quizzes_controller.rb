@@ -6,7 +6,9 @@ class QuizzesController < ApplicationController
   def create
     quiz = Quiz.new(quiz_params)
     quiz.user = current_user
-    quiz.save
+    if quiz.save
+      quiz.create_questions
+    end
   end
 
   private
