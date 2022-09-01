@@ -1,11 +1,13 @@
 class Country
+  attr_reader :name, :capital, :subregion, :region, :flag, :number
 
-  def initialize(data)
+  def initialize(data, num)
     @name = data[:name][:common]
     @capital = data[:capital]
     @subregion = data[:subregion]
     @region = data[:region]
     @flag = data[:flags][:png]
+    @number = num
   end
 
   def self.quiz_questions_hash(countries)

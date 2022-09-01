@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get "/dashboard", to: 'users#show'
 
   get '/quizzes/new', to: 'quizzes#new'
+  get '/quizzes/:id', to: 'quizzes#show'
   post '/quizzes/new', to: 'quizzes#create'
 
-  get '/questions/start', to: 'questions#show'
+  get '/questions/:id', to: 'questions#show'
+  post '/questions/:id', to: 'questions#create'
 end

@@ -1,0 +1,13 @@
+
+<h1> Questions </h1>
+
+<p> Fill in the blanks </p>
+
+<%= image_tag @current_question.flag %>
+<h3> <%= @current_question.name %>
+<%= form_with url: "/questions/#{@current_question.number}", method: :post, local: true do |form| %>
+<%= form.text_field :guess %>
+<%= form.submit "Next" %>
+<%= form.hidden_field :answer, value: @current_question.capital %>
+<%= form.hidden_field :question, value: @current_question.name %>
+<% end %>
