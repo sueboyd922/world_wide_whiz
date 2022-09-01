@@ -7,7 +7,8 @@ class QuizzesController < ApplicationController
     quiz = Quiz.new(quiz_params)
     quiz.user = current_user
     if quiz.save
-      quiz.create_questions
+      session[:current_quiz] = quiz
+      redirect_to "/questions/start"
     end
   end
 

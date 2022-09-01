@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/quizzes/new', to: 'quizzes#new'
   post '/quizzes/new', to: 'quizzes#create'
 
+  get '/questions/start', to: 'questions#show'
 end
