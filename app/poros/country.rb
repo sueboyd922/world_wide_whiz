@@ -12,9 +12,10 @@ class Country
 
   def self.quiz_questions_hash(countries)
     hash = {}
-    countries.each_with_index do |country, index|
-      hash[index + 1] = country
+    countries.each_with_index do |country|
+      hash[country.number] = country
     end
     hash
   end
+
 end
