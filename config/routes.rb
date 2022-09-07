@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   post '/quizzes/new', to: 'quizzes#create'
 
   get '/questions/:id', to: 'questions#show'
-  post '/questions/:id', to: 'questions#create'
+  post '/questions/:id', to: 'questions#update'
 end

@@ -11,11 +11,7 @@ class QuizzesController < ApplicationController
     quiz.user = current_user
     if quiz.save
       session[:current_quiz] = quiz.id
-      # Country.quiz_questions(current_quiz.fetch_quiz_countries)
-      current_quiz_questions
-      require "pry"; binding.pry
-      # questions = Country.quiz_questions_hash(current_quiz.fetch_quiz_countries)
-      # session[:current_quiz_questions] = questions
+      quiz.create_questions
       redirect_to "/questions/1"
     end
   end

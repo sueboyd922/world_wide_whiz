@@ -7,7 +7,6 @@ class Country
     @subregion = data[:subregion]
     @region = data[:region]
     @flag = data[:flags][:png]
-    @number = num
   end
 
   def self.quiz_questions_hash(countries)
