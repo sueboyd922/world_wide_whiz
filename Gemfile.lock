@@ -96,6 +96,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsonl (0.1.5)
     jwt (2.4.1)
     launchy (2.5.0)
       addressable (~> 2.7)
@@ -264,8 +265,10 @@ DEPENDENCIES
   capybara
   factory_bot
   faker
+  faraday
   figaro
   jbuilder (~> 2.7)
+  jsonl
   launchy
   listen (~> 3.2)
   omniauth-google-oauth2

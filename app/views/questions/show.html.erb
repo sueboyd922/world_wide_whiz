@@ -1,0 +1,12 @@
+
+<h1> Questions </h1>
+
+<p> Fill in the blanks </p>
+
+<h3> <%= @question.question %>
+<%= form_with url: "/questions/#{@question.number}", method: :post, local: true do |form| %>
+<%= form.text_field :guess %>
+<%= form.submit "Next" %>
+<%= form.hidden_field :answer, value: @question.answer %>
+<%= form.hidden_field :question, value: @question.question %>
+<% end %>

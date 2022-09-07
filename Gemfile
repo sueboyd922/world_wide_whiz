@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rspec_junit_formatter'
 
 gem 'omniauth-google-oauth2'
+gem 'faraday'
+gem 'jsonl'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
